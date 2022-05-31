@@ -1,0 +1,35 @@
+//ABSTRACTS
+@import "./abstracts/breakpoints";
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+//BASE
+@import "./base/animations";
+@import "./base/base";
+@import "./base/reset";
+@import "./base/typography";
+
+//COMPONENTS
+@import "./components/buttons";
+
+//LAYOUTS
+@import "./layouts/footer";
+@import "./layouts/forms";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/nav";
+
+//PAGES
+@import "./pages/about";
+@import "./pages/contact";
+
+//INDEX PAGES
+@import "./index-sections/section-a";
+@import "./index-sections/section-b";
+@import "./index-sections/section-c";
+@import "./index-sections/section-d";
+@import "./index-sections/section-e";
+@import "./index-sections/section-f";
+@import "./index-sections/section-g";

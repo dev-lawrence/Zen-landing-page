@@ -1,0 +1,27 @@
+h1,
+h2 {
+  font-family: $secondary-font;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem;
+    left: 40%;
+    background: $black;
+    width: 20%;
+    height: 0.031rem;
+  }
+}
+
+h3 {
+  font-weight: 400;
+}

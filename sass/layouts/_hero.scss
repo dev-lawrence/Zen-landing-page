@@ -1,0 +1,61 @@
+#header-section {
+  height: 100%;
+  background: $black
+    url("../../../img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp");
+  @include image-property(fixed);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease-in-out;
+    z-index: -1;
+  }
+}
+
+// LOGO
+.logo {
+  a {
+    color: $white;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+  }
+}
+
+// HERO SECTION
+#hero-section,
+.other-section {
+  @include flex(center, center);
+  text-align: center;
+  height: 80%;
+
+  .title {
+    color: $white;
+
+    h1 {
+      font-size: clamp(2.9rem, calc(5vw + 1rem), 4rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.other-section {
+  span {
+    margin-bottom: 0.7rem;
+  }
+}

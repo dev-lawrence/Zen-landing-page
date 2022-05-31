@@ -1,0 +1,15 @@
+header {
+  .content {
+    position: relative;
+    padding-top: 1rem;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .d-flex {
+    @include flex(center, space-between);
+    position: relative;
+  }
+}
