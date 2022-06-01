@@ -1,7 +1,4 @@
-html,
-body {
-  height: 100%;
-}
+@use '../abstracts/colors' as *;
 
 *,
 *::before,
@@ -27,4 +24,8 @@ a,
 span {
   display: inline-block;
   text-decoration: none;
+}
+
+body {
+  background-color: $black;
 }

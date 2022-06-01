@@ -4,9 +4,16 @@
 @use '../abstracts/breakpoints' as *;
 
 header {
+  // background-color: orange;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  transition: all 0.3s ease;
+
   .content {
     position: relative;
-    padding-top: 1rem;
+    padding: 1rem;
   }
 
   .container {
@@ -18,3 +25,7 @@ header {
     position: relative;
   }
 }
+
+// header.showBg {
+//   background-color: green;
+// }
