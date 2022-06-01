@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Suites website</title>
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <!--HEADER SECTION-->
@@ -23,33 +24,43 @@
             <a href="index.html">Suites</a>
           </div>
 
-          <!--NAV BUTTON-->
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-          <label for="nav-toggle" class="toggle-menu">
-            <span class="menu-icon"></span>
-          </label>
+          <!--NAV TOGGLE BUTTON-->
+          <div class="toggle-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
 
           <!--NAV MENU-->
           <nav class="nav">
             <div class="menu">
-              <li><a class="active" href="index.html">home</a></li>
-              <li><a href="room.html">rooms</a></li>
+              <li><a class="active" href="/index.html">home</a></li>
+              <li><a href="/room.html">rooms</a></li>
               <li><a href="event.html">events</a></li>
               <li><a href="about.html">about</a></li>
               <li><a href="contact.html">contact</a></li>
             </div>
           </nav>
         </div>
-
-        <!--HERO SECTION-->
-        <section class="other-section">
-          <div class="title">
-            <span>suites hotel & resort</span>
-            <h1>about us</h1>
-          </div>
-        </section>
       </div>
     </header>
+
+    <!--HERO SECTION-->
+    <section id="hero-section">
+      <div class="slider__container">
+        <!-- slide 1 -->
+        <div class="slide">
+          <div class="content">
+            <div class="title">
+              <span>suites hotel & resort</span>
+              <h1>about us</h1>
+            </div>
+            <img
+              src="./img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp"
+              alt="slide-1"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--SECTION B-->
     <section class="section-b">
