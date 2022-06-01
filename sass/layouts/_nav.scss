@@ -1,3 +1,8 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 //TOGGLE MENU
 .toggle-menu {
   position: absolute;
@@ -23,7 +28,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     background-color: $white;

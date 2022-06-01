@@ -1,14 +1,19 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 .section-d {
   padding: 2rem 0;
   color: $white;
   background: $black
-    url("../../../img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp");
+    url('../../../img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp');
   @include image-property(fixed);
   position: relative;
   z-index: 10;
 
   &::after {
-    content: "";
+    content: '';
     opacity: 0.5;
     position: absolute;
     top: 0;

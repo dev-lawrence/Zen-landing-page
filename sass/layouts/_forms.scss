@@ -1,3 +1,8 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 .form {
   padding: 4rem 0;
 
@@ -13,9 +18,9 @@
   }
 
   textarea,
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'] {
     width: 100%;
     border-radius: 0.2rem;
     margin-top: 0.5rem;
@@ -24,9 +29,9 @@
     border: 1px solid #ced4da;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'] {
     height: 40px;
   }
 

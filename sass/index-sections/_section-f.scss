@@ -1,3 +1,8 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 .section-f {
   padding: 4rem 0 3rem;
 
@@ -31,7 +36,7 @@
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0.6rem;
         right: -0.7rem;

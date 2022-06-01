@@ -1,3 +1,8 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 h1,
 h2 {
   font-family: $secondary-font;
@@ -12,7 +17,7 @@ h2 {
   margin-bottom: 5rem;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -0.2rem;
     left: 40%;

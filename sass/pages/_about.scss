@@ -1,3 +1,8 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/breakpoints' as *;
+
 .hotel-staff-section {
   background-color: $bg-clr;
   padding: 3rem 0 4rem;
