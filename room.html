@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Suites website</title>
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <!--HEADER SECTION-->
@@ -23,33 +24,77 @@
             <a href="index.html">Suites</a>
           </div>
 
-          <!--NAV BUTTON-->
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-          <label for="nav-toggle" class="toggle-menu">
-            <span class="menu-icon"></span>
-          </label>
+          <!--NAV TOGGLE BUTTON-->
+          <div class="toggle-menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
 
           <!--NAV MENU-->
           <nav class="nav">
             <div class="menu">
-              <li><a class="active" href="index.html">home</a></li>
-              <li><a href="room.html">rooms</a></li>
+              <li><a class="active" href="/index.html">home</a></li>
+              <li><a href="/room.html">rooms</a></li>
               <li><a href="event.html">events</a></li>
               <li><a href="about.html">about</a></li>
               <li><a href="contact.html">contact</a></li>
             </div>
           </nav>
         </div>
-
-        <!--HERO SECTION-->
-        <section class="other-section">
-          <div class="title">
-            <span>luxurious rooms</span>
-            <h1>hotel rooms</h1>
-          </div>
-        </section>
       </div>
     </header>
+
+    <!--HERO SECTION-->
+    <section id="hero-section">
+      <div class="slider__container">
+        <!-- slide 1 -->
+        <div class="slide">
+          <div class="content">
+            <div class="title">
+              <h1>Here we are</h1>
+              <span>hotel & resort</span>
+            </div>
+            <img
+              src="./img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp"
+              alt="slide-1"
+            />
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="slide">
+          <div class="content">
+            <div class="title">
+              <h1>unique experience</h1>
+              <span>enjoy with us</span>
+            </div>
+            <img
+              src="./img/xhero_2.jpg.pagespeed.ic.kt36xQm6lK.webp"
+              alt="slide-2"
+            />
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="slide">
+          <div class="content">
+            <div class="title">
+              <h1>relaxing room</h1>
+              <span>your room your stay</span>
+            </div>
+            <img
+              src="./img/xhero_3.jpg.pagespeed.ic.0RfTZ9Ub16.webp"
+              alt="slide-3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- buttons -->
+      <div class="buttons">
+        <button class="prev-btn"><i class="fas fa-arrow-left"></i></button>
+        <button class="next-btn"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </section>
 
     <!--SECTION A-->
     <section class="section-a">

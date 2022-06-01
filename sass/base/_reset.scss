@@ -26,6 +26,7 @@ span {
   text-decoration: none;
 }
 
-body {
-  background-color: $black;
+body.fixed {
+  position: fixed;
+  width: 100%;
 }

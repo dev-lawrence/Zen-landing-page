@@ -7,6 +7,10 @@
   padding: 3rem 0 4rem;
   text-align: center;
 
+  .grid {
+    @include grid(repeat(2, 1fr), 2rem);
+  }
+
   @include medium {
     padding-top: 6rem;
   }

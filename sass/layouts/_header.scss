@@ -4,7 +4,6 @@
 @use '../abstracts/breakpoints' as *;
 
 header {
-  // background-color: orange;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -24,8 +23,21 @@ header {
     @include flex(center, space-between);
     position: relative;
   }
+
+  &.showBg {
+    background-color: $white;
+  }
 }
 
-// header.showBg {
-//   background-color: green;
-// }
+// LOGO
+.logo {
+  a {
+    color: $white;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+
+    &.color {
+      color: $black;
+    }
+  }
+}
