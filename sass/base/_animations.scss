@@ -1,0 +1,12 @@
+@use '../layouts/footer';
+
+// to top arrow
+@keyframes goTop {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}

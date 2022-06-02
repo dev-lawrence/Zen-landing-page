@@ -84,15 +84,22 @@
 
   .page-up {
     a {
-      position: absolute;
+      position: fixed;
       bottom: 1rem;
       right: 1rem;
       background-color: $black;
       color: $white;
-      opacity: 0.5;
+      opacity: 0;
+      visibility: hidden;
       padding: 0.3rem 0.9rem;
       border-radius: 0.3rem;
       transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
+
+      &.showArrow {
+        animation: goTop 0.5s linear;
+        opacity: 0.5;
+        visibility: visible;
+      }
 
       &:hover {
         background-color: $btn-clr;

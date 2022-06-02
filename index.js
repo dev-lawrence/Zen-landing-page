@@ -13,6 +13,7 @@ let currentSlide = 0;
 let auto = false;
 let slideTime = 7000;
 let slideInterval;
+const upArrow = document.querySelector('.page-up a');
 
 // change header background color on scroll
 const showBg = () => {
@@ -101,7 +102,19 @@ if (auto) {
   slideInterval = setInterval(nextSlide, slideTime);
 }
 
+// show goToTop arrow on scroll
+const pageUp = () => {
+  const scroll = window.scrollY;
+
+  if (scroll > 4000) {
+    upArrow.classList.add('showArrow');
+  } else {
+    upArrow.classList.remove('showArrow');
+  }
+};
+
 // EVENT LISTENERS
 window.addEventListener('scroll', showBg);
+window.addEventListener('scroll', pageUp);
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);

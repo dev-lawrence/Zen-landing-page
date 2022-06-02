@@ -355,6 +355,105 @@
   }
 }
 
+#footer-section {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3rem 0 2rem;
+  position: relative;
+}
+#footer-section a,
+#footer-section p {
+  font-size: 0.9rem;
+}
+#footer-section a {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.3);
+}
+#footer-section p {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer-section h3 {
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+#footer-section .m-b {
+  margin-bottom: 2rem;
+}
+#footer-section .about p {
+  margin-bottom: 1rem;
+}
+#footer-section .about .btn {
+  color: #fff;
+  background-color: #f23a2e;
+  padding: 0.4rem 1.5rem;
+  border-radius: 4rem;
+  transition: background-color 0.2s ease-in-out;
+}
+#footer-section .about .btn:hover {
+  background-color: #c7180c;
+}
+#footer-section .menu--links a,
+#footer-section .social-links a,
+#footer-section .copyright a {
+  transition: color 0.2s ease-in-out;
+}
+#footer-section .menu--links a:hover,
+#footer-section .social-links a:hover,
+#footer-section .copyright a:hover {
+  color: #fff;
+}
+@media (min-width: 768px) {
+  #footer-section .menu--links {
+    margin-left: 1.5rem;
+  }
+}
+#footer-section .menu--links li {
+  margin-bottom: 0.6rem;
+}
+#footer-section .social-links a {
+  margin-right: 1rem;
+}
+#footer-section .copyright {
+  text-align: center;
+  padding: 3rem 0;
+}
+#footer-section .page-up a {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.3rem;
+  transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
+}
+#footer-section .page-up a.showArrow {
+  animation: goTop 0.5s linear;
+  opacity: 0.5;
+  visibility: visible;
+}
+#footer-section .page-up a:hover {
+  background-color: #f23a2e;
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  #footer-section .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+@keyframes goTop {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 body {
   -webkit-text-size-adjust: 100%;
   background-color: #fff;
@@ -461,91 +560,6 @@ h3 {
 }
 .btn:hover {
   color: #c7180c;
-}
-
-#footer-section {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 3rem 0 2rem;
-  position: relative;
-}
-#footer-section a,
-#footer-section p {
-  font-size: 0.9rem;
-}
-#footer-section a {
-  text-transform: capitalize;
-  color: rgba(255, 255, 255, 0.3);
-}
-#footer-section p {
-  color: rgba(255, 255, 255, 0.5);
-}
-#footer-section h3 {
-  color: #fff;
-  text-transform: capitalize;
-  margin-bottom: 1rem;
-}
-#footer-section .m-b {
-  margin-bottom: 2rem;
-}
-#footer-section .about p {
-  margin-bottom: 1rem;
-}
-#footer-section .about .btn {
-  color: #fff;
-  background-color: #f23a2e;
-  padding: 0.4rem 1.5rem;
-  border-radius: 4rem;
-  transition: background-color 0.2s ease-in-out;
-}
-#footer-section .about .btn:hover {
-  background-color: #c7180c;
-}
-#footer-section .menu--links a,
-#footer-section .social-links a,
-#footer-section .copyright a {
-  transition: color 0.2s ease-in-out;
-}
-#footer-section .menu--links a:hover,
-#footer-section .social-links a:hover,
-#footer-section .copyright a:hover {
-  color: #fff;
-}
-@media (min-width: 768px) {
-  #footer-section .menu--links {
-    margin-left: 1.5rem;
-  }
-}
-#footer-section .menu--links li {
-  margin-bottom: 0.6rem;
-}
-#footer-section .social-links a {
-  margin-right: 1rem;
-}
-#footer-section .copyright {
-  text-align: center;
-  padding: 3rem 0;
-}
-#footer-section .page-up a {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #000;
-  color: #fff;
-  opacity: 0.5;
-  padding: 0.3rem 0.9rem;
-  border-radius: 0.3rem;
-  transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
-}
-#footer-section .page-up a:hover {
-  background-color: #f23a2e;
-  opacity: 1;
-}
-@media (min-width: 768px) {
-  #footer-section .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
 }
 
 .form {
