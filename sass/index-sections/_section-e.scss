@@ -17,6 +17,10 @@
     &:hover {
       opacity: 0.7;
     }
+
+    &.removeCursor {
+      cursor: none;
+    }
   }
 
   //MEDIA QUERY
@@ -31,4 +35,27 @@
       @include grid(repeat(4, 1fr), 0rem);
     }
   }
+}
+
+// MODAL
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 75%;
+  max-width: 75%;
 }

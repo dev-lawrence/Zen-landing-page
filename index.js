@@ -14,6 +14,7 @@ let auto = false;
 let slideTime = 7000;
 let slideInterval;
 const upArrow = document.querySelector('.page-up a');
+const cards = document.querySelectorAll('.fade-in');
 
 // change header background color on scroll
 const showBg = () => {
@@ -102,11 +103,38 @@ if (auto) {
   slideInterval = setInterval(nextSlide, slideTime);
 }
 
+// CARDS
+// fade in options
+cardOptions = {
+  threshold: 0,
+  rootMargin: '0px 0px -150px 0px',
+};
+
+// fade in cards
+const showCardsOnScroll = new IntersectionObserver(function (
+  entries,
+  showCardsOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      showCardsOnScroll.unobserve(entry.target);
+    }
+  });
+},
+cardOptions);
+
+cards.forEach((card) => {
+  showCardsOnScroll.observe(card);
+});
+
 // show goToTop arrow on scroll
 const pageUp = () => {
   const scroll = window.scrollY;
 
-  if (scroll > 4000) {
+  if (scroll > 1300) {
     upArrow.classList.add('showArrow');
   } else {
     upArrow.classList.remove('showArrow');
@@ -118,3 +146,24 @@ window.addEventListener('scroll', showBg);
 window.addEventListener('scroll', pageUp);
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
+
+// MODAL
+// Get the modal
+const modal = document.querySelector('#myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+const img = document.querySelector('#myImg');
+const modalImg = document.querySelector('#img01');
+
+img.addEventListener('click', () => {
+  modal.style.display = 'block';
+  modalImg.src = './img/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp';
+  img.classList.add('removeCursor');
+});
+
+// img.onclick = function () {
+//   modal.style.display = 'block';
+//   modalImg.src = this.src;
+//   img.style.cursor = 'none';
+//   // document.body.classList.toggle('fixed');
+// };

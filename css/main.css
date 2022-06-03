@@ -244,6 +244,9 @@
 .section-e img:hover {
   opacity: 0.7;
 }
+.section-e img.removeCursor {
+  cursor: none;
+}
 @media (min-width: 768px) {
   .section-e .grid {
     display: grid;
@@ -257,6 +260,37 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 0rem;
   }
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10000;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow-y: hidden;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 75%;
+  max-width: 75%;
 }
 
 .section-f {
@@ -454,6 +488,17 @@
     transform: translateY(0px);
   }
 }
+.fade-in {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.fade-in.appear {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.7s ease-in, transform 0.7s ease-in;
+}
+
 body {
   -webkit-text-size-adjust: 100%;
   background-color: #fff;
