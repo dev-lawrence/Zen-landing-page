@@ -27,6 +27,18 @@ header {
   &.showBg {
     background-color: $white;
   }
+
+  &.showBg .nav a {
+    color: rgba(0, 0, 0, 0.6);
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &.showBg .nav .active {
+    color: $btn-clr;
+  }
 }
 
 // LOGO

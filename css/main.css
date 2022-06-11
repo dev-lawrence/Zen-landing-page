@@ -276,12 +276,22 @@
   transition: all 0.3s ease-in;
 }
 .modal-container .zoom {
-  width: 700px;
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .modal-container .zoom {
+    width: 700px;
+    margin: unset;
+  }
+}
+.modal-container .close-container {
+  position: relative;
 }
 .modal-container .close {
   position: absolute;
-  top: 4rem;
-  right: 15rem;
+  bottom: 12rem;
+  right: 1rem;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -679,6 +689,15 @@ header .d-flex {
 header.showBg {
   background-color: #fff;
 }
+header.showBg .nav a {
+  color: rgba(0, 0, 0, 0.6);
+}
+header.showBg .nav a:hover {
+  color: #000;
+}
+header.showBg .nav .active {
+  color: #f23a2e;
+}
 
 .logo a {
   color: #fff;
@@ -891,7 +910,7 @@ header.showBg {
   .menu a {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 }
 

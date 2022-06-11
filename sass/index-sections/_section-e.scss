@@ -51,13 +51,24 @@
   transition: all 0.3s ease-in;
 
   .zoom {
-    width: 700px;
+    width: 95%;
+    margin: 0 auto;
+
+    @include medium {
+      width: 700px;
+      margin: unset;
+    }
+  }
+
+  .close-container {
+    position: relative;
   }
 
   .close {
     position: absolute;
-    top: 4rem;
-    right: 15rem;
+    bottom: 12rem;
+    // top: 4rem;
+    right: 1rem;
     font-size: 2rem;
     cursor: pointer;
   }
