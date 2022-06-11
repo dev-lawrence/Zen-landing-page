@@ -294,6 +294,7 @@
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  color: #000;
 }
 
 .modal-container.show {
