@@ -147,23 +147,22 @@ window.addEventListener('scroll', pageUp);
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
 
-// MODAL
-// Get the modal
-const modal = document.querySelector('#myModal');
+// GALLERY SECTION
+const gallery = document.querySelector('.section-e .grid');
+const galleryImg = document.querySelectorAll('.img');
+const modal = document.querySelector('.modal-container');
+const closeIcon = document.querySelector('.close');
+const zoom = document.querySelector('.zoom');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-const img = document.querySelector('#myImg');
-const modalImg = document.querySelector('#img01');
-
-img.addEventListener('click', () => {
-  modal.style.display = 'block';
-  modalImg.src = './img/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp';
-  img.classList.add('removeCursor');
+galleryImg.forEach((img) => {
+  img.addEventListener('click', () => {
+    zoom.src = img.getAttribute('src');
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
 });
 
-// img.onclick = function () {
-//   modal.style.display = 'block';
-//   modalImg.src = this.src;
-//   img.style.cursor = 'none';
-//   // document.body.classList.toggle('fixed');
-// };
+closeIcon.addEventListener('click', () => {
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto';
+});
