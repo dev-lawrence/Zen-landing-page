@@ -1,3 +1,11 @@
+// RELOAD PAGE
+window.onload = function () {
+  if (!window.location.hash) {
+    window.location = window.location + '#loaded';
+    window.location.reload();
+  }
+};
+
 const header = document.querySelector('#header-section');
 const logo = header.querySelector('.logo a');
 const nav = document.querySelector('.nav');
@@ -40,7 +48,7 @@ if (body === page) {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   let currentSlide = 0;
-  let auto = true;
+  let auto = false;
   let slideTime = 7000;
   let slideInterval;
 
