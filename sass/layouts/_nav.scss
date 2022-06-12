@@ -64,13 +64,13 @@
     height: unset;
   }
 
-  .active {
-    color: $btn-clr;
+  // .active {
+  //   color: $btn-clr;
 
-    @include medium {
-      color: $white;
-    }
-  }
+  //   @include medium {
+  //     color: $white;
+  //   }
+  // }
 
   li {
     margin-bottom: 1.2rem;
@@ -104,6 +104,14 @@
       color: rgba(255, 255, 255, 0.6);
       text-transform: uppercase;
       font-size: $font-sz-200;
+    }
+
+    &.active {
+      color: $btn-clr;
+
+      @include medium {
+        color: $white;
+      }
     }
   }
 }

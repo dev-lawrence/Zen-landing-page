@@ -870,14 +870,6 @@ header.showBg .nav .active {
     height: unset;
   }
 }
-.menu .active {
-  color: #f23a2e;
-}
-@media (min-width: 768px) {
-  .menu .active {
-    color: #fff;
-  }
-}
 .menu li {
   margin-bottom: 1.2rem;
   text-transform: capitalize;
@@ -912,6 +904,14 @@ header.showBg .nav .active {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     font-size: 0.9rem;
+  }
+}
+.menu a.active {
+  color: #f23a2e;
+}
+@media (min-width: 768px) {
+  .menu a.active {
+    color: #fff;
   }
 }
 

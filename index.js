@@ -1,11 +1,3 @@
-// RELOAD PAGE
-window.onload = function () {
-  if (!window.location.hash) {
-    window.location = window.location + '#loaded';
-    window.location.reload();
-  }
-};
-
 const header = document.querySelector('#header-section');
 const logo = header.querySelector('.logo a');
 const nav = document.querySelector('.nav');
@@ -140,11 +132,10 @@ menuBar.addEventListener('click', () => {
 });
 
 // NAV LINKS
+const activePage = window.location.pathname;
 menuLinks.forEach((link) => {
-  const activePage = window.location.pathname;
   if (link.href.includes(`${activePage}`)) {
-    const removeActiveClass = menu.querySelector('.active');
-    removeActiveClass.classList.remove('active');
+    console.log(`${activePage}`);
     link.classList.add('active');
   }
 });
