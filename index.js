@@ -2,13 +2,52 @@ const header = document.querySelector('#header-section');
 const logo = header.querySelector('.logo a');
 const nav = document.querySelector('.nav');
 const menu = nav.querySelector('.menu');
-const menuLinks = menu.querySelectorAll('a');
+// const menuLinks = menu.querySelectorAll('a');
 const menuBar = document.querySelector('.toggle-menu');
 const upArrow = document.querySelector('.page-up a');
 const cards = document.querySelectorAll('.fade-in');
 const page = document.querySelector('#home');
 const about = document.querySelector('#about');
 const body = document.querySelector('body');
+
+// change header background color on scroll
+const showBg = () => {
+  const scroll = window.scrollY;
+
+  if (scroll > 200) {
+    header.classList.add('showBg');
+    logo.classList.add('color');
+    menuBar.classList.add('color');
+  } else {
+    header.classList.remove('showBg');
+    logo.classList.remove('color');
+    menuBar.classList.remove('color');
+  }
+};
+
+// NAV BAR
+menuBar.addEventListener('click', () => {
+  nav.classList.toggle('showMenu');
+  let closeBar = menuBar.querySelector('i');
+  closeBar.classList.toggle('showMenu');
+  document.body.classList.toggle('fixed');
+});
+
+const navLinks = document.querySelectorAll('.menu a').forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  }
+});
+
+// NAV LINKS
+// menuLinks.forEach((link) => {
+//   const activePage = window.location.pathname;
+//   const active = document.querySelector('.active');
+//   if (link.href.includes(`${activePage}`)) {
+//     active.classList.remove('active');
+//     link.classList.add('active');
+//   }
+// });
 
 // FOR HOME AND ABOUT SECTION
 const galleryFun = () => {
@@ -107,38 +146,6 @@ if (body === page) {
 if (body === about) {
   galleryFun();
 }
-
-// change header background color on scroll
-const showBg = () => {
-  const scroll = window.scrollY;
-
-  if (scroll > 200) {
-    header.classList.add('showBg');
-    logo.classList.add('color');
-    menuBar.classList.add('color');
-  } else {
-    header.classList.remove('showBg');
-    logo.classList.remove('color');
-    menuBar.classList.remove('color');
-  }
-};
-
-// NAV BAR
-menuBar.addEventListener('click', () => {
-  nav.classList.toggle('showMenu');
-  let closeBar = menuBar.querySelector('i');
-  closeBar.classList.toggle('showMenu');
-  document.body.classList.toggle('fixed');
-});
-
-// NAV LINKS
-const activePage = window.location.pathname;
-menuLinks.forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    console.log(`${activePage}`);
-    link.classList.add('active');
-  }
-});
 
 // CARDS
 // fade in options
