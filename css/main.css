@@ -763,7 +763,7 @@ header.showBg .nav .active {
   z-index: 3;
 }
 #hero-section .content .title h1 {
-  font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+  font-size: clamp(2.3rem, 5vw + 1rem, 4rem);
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0.5rem;
