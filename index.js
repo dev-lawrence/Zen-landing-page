@@ -2,7 +2,7 @@ const header = document.querySelector('#header-section');
 const logo = header.querySelector('.logo a');
 const nav = document.querySelector('.nav');
 const menu = nav.querySelector('.menu');
-// const menuLinks = menu.querySelectorAll('a');
+const menuLinks = menu.querySelectorAll('a');
 const menuBar = document.querySelector('.toggle-menu');
 const upArrow = document.querySelector('.page-up a');
 const cards = document.querySelectorAll('.fade-in');
@@ -33,21 +33,12 @@ menuBar.addEventListener('click', () => {
   document.body.classList.toggle('fixed');
 });
 
-const navLinks = document.querySelectorAll('.menu a').forEach((link) => {
+// NAV LINKS
+menuLinks.forEach((link) => {
   if (link.href === window.location.href) {
     link.classList.add('active');
   }
 });
-
-// NAV LINKS
-// menuLinks.forEach((link) => {
-//   const activePage = window.location.pathname;
-//   const active = document.querySelector('.active');
-//   if (link.href.includes(`${activePage}`)) {
-//     active.classList.remove('active');
-//     link.classList.add('active');
-//   }
-// });
 
 // FOR HOME AND ABOUT SECTION
 const galleryFun = () => {
