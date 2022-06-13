@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .section-a {
   background-color: #f8f9fa;
   padding: 3rem 0 4rem;
@@ -294,7 +294,12 @@
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
-  color: #000;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .modal-container .close {
+    color: #000;
+  }
 }
 
 .modal-container.show {
@@ -343,7 +348,7 @@
 }
 .section-f .title .admin {
   position: relative;
-  color: #f23a2e;
+  color: #ff3a20;
   transition: color 0.2s ease-in-out;
 }
 .section-f .title .admin:hover {
@@ -427,7 +432,7 @@
 }
 #footer-section .about .btn {
   color: #fff;
-  background-color: #f23a2e;
+  background-color: #ff3a20;
   padding: 0.4rem 1.5rem;
   border-radius: 4rem;
   transition: background-color 0.2s ease-in-out;
@@ -478,7 +483,7 @@
   visibility: visible;
 }
 #footer-section .page-up a:hover {
-  background-color: #f23a2e;
+  background-color: #ff3a20;
   opacity: 1;
 }
 @media (min-width: 768px) {
@@ -574,7 +579,7 @@ body.fixed {
 
 h1,
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", serif;
   text-transform: capitalize;
   text-align: center;
 }
@@ -606,7 +611,7 @@ h3 {
   text-transform: uppercase;
   display: inline-block;
   font-size: 0.9rem;
-  color: #f23a2e;
+  color: #ff3a20;
   transition: color 0.3s ease-in;
 }
 .btn span {
@@ -636,7 +641,7 @@ h3 {
   border-radius: 0.2rem;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
-  outline-color: #f23a2e;
+  outline-color: #ff3a20;
   border: 1px solid #ced4da;
 }
 .form input[type=text],
@@ -657,7 +662,7 @@ h3 {
   font-family: "Work Sans", sans-serif;
   cursor: pointer;
   text-transform: capitalize;
-  background-color: #f23a2e;
+  background-color: #ff3a20;
   padding: 0.7rem 1.5rem;
   margin-top: 1rem;
   border-radius: 4rem;
@@ -697,12 +702,12 @@ header.showBg .nav a:hover {
   color: #000;
 }
 header.showBg .nav .active {
-  color: #f23a2e;
+  color: #ff3a20;
 }
 
 .logo a {
   color: #fff;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", serif;
   font-size: 1.5rem;
 }
 .logo a.color {
@@ -761,6 +766,7 @@ header.showBg .nav .active {
   font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
   font-weight: 500;
   line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 #hero-section .content .title span {
   text-transform: uppercase;
@@ -892,7 +898,7 @@ header.showBg .nav .active {
   transition: color 0.2s ease-in-out;
 }
 .menu a:hover {
-  color: #f23a2e;
+  color: #ff3a20;
 }
 @media (min-width: 768px) {
   .menu a:hover {
@@ -907,7 +913,7 @@ header.showBg .nav .active {
   }
 }
 .menu a.active {
-  color: #f23a2e;
+  color: #ff3a20;
 }
 @media (min-width: 768px) {
   .menu a.active {
@@ -1005,7 +1011,7 @@ header.showBg .nav .active {
   margin-bottom: 1rem;
 }
 #contact-section .contact-info a {
-  color: #f23a2e;
+  color: #ff3a20;
   transition: color 0.2s ease-in-out;
 }
 #contact-section .contact-info a:hover {

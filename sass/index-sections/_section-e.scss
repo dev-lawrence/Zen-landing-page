@@ -70,7 +70,11 @@
     right: 1rem;
     font-size: 2rem;
     cursor: pointer;
-    color: $black;
+    color: $white;
+
+    @include medium {
+      color: $black;
+    }
   }
 }
 

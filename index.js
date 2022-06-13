@@ -70,7 +70,7 @@ if (body === page) {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   let currentSlide = 0;
-  let auto = false;
+  let auto = true;
   let slideTime = 7000;
   let slideInterval;
 
