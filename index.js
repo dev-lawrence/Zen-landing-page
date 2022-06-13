@@ -71,7 +71,7 @@ if (body === page) {
   const nextBtn = document.querySelector('.next-btn');
   let currentSlide = 0;
   let auto = true;
-  let slideTime = 7000;
+  let slideTime = 5000;
   let slideInterval;
 
   const reset = () => {
