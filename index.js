@@ -165,6 +165,31 @@ cards.forEach((card) => {
   showCardsOnScroll.observe(card);
 });
 
+// countdown timer
+const countDown = () => {
+  const releaseDate = new Date('August 20, 2022 00:00:00').getTime();
+  const presentDate = new Date().getTime();
+  const gap = releaseDate - presentDate;
+
+  //calculate time
+  const second = 1000;
+  const minute = 60 * second;
+  const hour = 60 * minute;
+  const day = 24 * hour;
+
+  const dayText = Math.floor(gap / day);
+  const hourText = Math.floor((gap % day) / hour);
+  const minuteText = Math.floor((gap % hour) / minute);
+  const secondText = Math.floor((gap % minute) / second);
+
+  document.querySelector('.day').textContent = dayText;
+  document.querySelector('.hour').textContent = hourText;
+  document.querySelector('.minute').textContent = minuteText;
+  document.querySelector('.second').textContent = secondText;
+};
+
+setInterval(countDown, 1000);
+
 // show goToTop arrow on scroll
 const pageUp = () => {
   const scroll = window.scrollY;
