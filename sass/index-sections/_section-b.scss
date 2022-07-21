@@ -1,7 +1,5 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/fonts' as *;
-@use '../abstracts/mixins' as *;
-@use '../abstracts/breakpoints' as *;
+@use '../abstracts' as *;
+
 .section-b {
   padding: 3rem 0 4rem;
 

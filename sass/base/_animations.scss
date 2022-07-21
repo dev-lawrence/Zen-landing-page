@@ -1,4 +1,4 @@
-@use '../layouts/footer';
+@use '../layouts' as *;
 
 // to top arrow
 @keyframes goTop {

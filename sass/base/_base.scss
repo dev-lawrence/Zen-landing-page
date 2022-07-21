@@ -1,10 +1,6 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/fonts' as *;
-@use '../abstracts/mixins' as *;
-@use '../abstracts/breakpoints' as *;
+@use '../abstracts' as *;
 
 body {
-  -webkit-text-size-adjust: 100%;
   background-color: $white;
   font-family: $primary-font;
   line-height: 1.6;

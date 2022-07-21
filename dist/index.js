@@ -70,7 +70,7 @@ if (body === page) {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   let currentSlide = 0;
-  let auto = true;
+  let auto = false;
   let slideTime = 5000;
   let slideInterval;
 
@@ -166,29 +166,29 @@ cards.forEach((card) => {
 });
 
 // countdown timer
-const countDown = () => {
-  const releaseDate = new Date('August 20, 2022 00:00:00').getTime();
-  const presentDate = new Date().getTime();
-  const gap = releaseDate - presentDate;
+// const countDown = () => {
+//   const releaseDate = new Date('August 20, 2022 00:00:00').getTime();
+//   const presentDate = new Date().getTime();
+//   const gap = releaseDate - presentDate;
 
-  //calculate time
-  const second = 1000;
-  const minute = 60 * second;
-  const hour = 60 * minute;
-  const day = 24 * hour;
+//   //calculate time
+//   const second = 1000;
+//   const minute = 60 * second;
+//   const hour = 60 * minute;
+//   const day = 24 * hour;
 
-  const dayText = Math.floor(gap / day);
-  const hourText = Math.floor((gap % day) / hour);
-  const minuteText = Math.floor((gap % hour) / minute);
-  const secondText = Math.floor((gap % minute) / second);
+//   const dayText = Math.floor(gap / day);
+//   const hourText = Math.floor((gap % day) / hour);
+//   const minuteText = Math.floor((gap % hour) / minute);
+//   const secondText = Math.floor((gap % minute) / second);
 
-  document.querySelector('.day').textContent = dayText;
-  document.querySelector('.hour').textContent = hourText;
-  document.querySelector('.minute').textContent = minuteText;
-  document.querySelector('.second').textContent = secondText;
-};
+//   document.querySelector('.day').textContent = dayText;
+//   document.querySelector('.hour').textContent = hourText;
+//   document.querySelector('.minute').textContent = minuteText;
+//   document.querySelector('.second').textContent = secondText;
+// };
 
-setInterval(countDown, 1000);
+// setInterval(countDown, 1000);
 
 // show goToTop arrow on scroll
 const pageUp = () => {

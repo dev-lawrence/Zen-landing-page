@@ -1,31 +1,6 @@
-//INDEX PAGES
-@use './index-sections/section-a';
-@use './index-sections/section-b';
-@use './index-sections/section-c';
-@use './index-sections/section-d';
-@use './index-sections/section-e';
-@use './index-sections/section-f';
-@use './index-sections/section-g';
-
-//ABSTRACTS
-@use './abstracts/index';
-
-//BASE
-@use './base/animations';
-@use './base/base';
-@use './base/reset';
-@use './base/typography';
-
-//COMPONENTS
-@use './components/buttons';
-
-//LAYOUTS
-@use './layouts/footer';
-@use './layouts/forms';
-@use './layouts/header';
-@use './layouts/hero';
-@use './layouts/nav';
-
-//PAGES
-@use './pages/about';
-@use './pages/contact';
+@use './index-sections';
+@use './abstracts';
+@use './base';
+@use './components';
+@use './layouts';
+@use './pages';

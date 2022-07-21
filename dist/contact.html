@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Zen website / room page</title>
+    <title>Zen website / contact page</title>
     <script defer src="./index.js"></script>
   </head>
   <body>
@@ -32,11 +32,11 @@
           <!--NAV MENU-->
           <nav class="nav">
             <div class="menu">
-              <li><a href="index.html">home</a></li>
-              <li><a href="/room.html">rooms</a></li>
-              <li><a href="/event.html">events</a></li>
-              <li><a href="/about.html">about</a></li>
-              <li><a href="/contact.html">contact</a></li>
+              <li><a href="./index.html">home</a></li>
+              <li><a href="./room.html">rooms</a></li>
+              <li><a href="./event.html">events</a></li>
+              <li><a href="./about.html">about</a></li>
+              <li><a href="./contact.html">contact</a></li>
             </div>
           </nav>
         </div>
@@ -50,8 +50,8 @@
         <div class="slide">
           <div class="content">
             <div class="title">
-              <span>luxurious rooms</span>
-              <h1>hotel rooms</h1>
+              <span>chat with us</span>
+              <h1>get in touch</h1>
             </div>
             <img src="./img/jp-valery-DE9MM2voqKc-unsplash.jpg" alt="slide-3" />
           </div>
@@ -59,96 +59,54 @@
       </div>
     </section>
 
-    <!--SECTION A-->
-    <section class="section-a">
+    <!--CONTACT SECTION-->
+    <section id="contact-section">
       <div class="container">
-        <div class="title">
-          <h2>our rooms</h2>
-        </div>
-        <div class="content">
-          <div class="cards grid">
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">standard room</a>
-                <p>$350.00 / per night</p>
-              </div>
+        <div class="grid">
+          <form class="form" netlify>
+            <div class="row">
+              <label for="name">full name</label><br />
+              <input id="name" type="text" placeholder="Full Name" />
             </div>
 
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_2.jpg.pagespeed.ic.jAvfEkr8MX.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">family room</a>
-                <p>$400.00 / per night</p>
-              </div>
+            <div class="row">
+              <label for="email">email</label><br />
+              <input id="email" type="email" placeholder="Email Address" />
             </div>
 
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_3.jpg.pagespeed.ic.osxKtu1h5b.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">single room</a>
-                <p>$255.00 / per night</p>
-              </div>
+            <div class="row">
+              <label for="phone">phone</label><br />
+              <input id="phone" type="tel" placeholder="Phone" />
             </div>
 
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">deluxe room</a>
-                <p>$150.00 / per night</p>
-              </div>
+            <div class="message">
+              <label for="message">message</label><br />
+              <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Say hello to us"
+              ></textarea>
             </div>
 
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_2.jpg.pagespeed.ic.jAvfEkr8MX.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">luxury room</a>
-                <p>$200.00 / per night</p>
-              </div>
+            <button class="btn" type="submit">send message</button>
+          </form>
+
+          <div class="contact-info">
+            <h3>contact info</h3>
+            <div class="m-b">
+              <h5>address</h5>
+              <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
             </div>
 
-            <div class="card fade-in">
-              <a class="s-img" href="#">
-                <img
-                  aria-label="room"
-                  src="./img/ximg_3.jpg.pagespeed.ic.osxKtu1h5b.webp"
-                  alt="bed"
-                />
-              </a>
-              <div class="card-content">
-                <a class="room-name" href="#">single room</a>
-                <p>$155.00 / per night</p>
-              </div>
+            <div class="m-b">
+              <h5>phone</h5>
+              <a href="#">+1 232 3235 324</a>
+            </div>
+
+            <div class="m-b">
+              <h5>email address</h5>
+              <a href="#">youremail@domain.com</a>
             </div>
           </div>
         </div>
@@ -156,7 +114,7 @@
     </section>
 
     <!--FOOTER SECTION-->
-    <section id="footer-section">
+    <footer id="footer-section">
       <div class="container">
         <div class="grid">
           <div class="about m-b">
@@ -217,6 +175,6 @@
           <i class="fas fa-angle-double-up"></i>
         </a>
       </div>
-    </section>
+    </footer>
   </body>
 </html>
