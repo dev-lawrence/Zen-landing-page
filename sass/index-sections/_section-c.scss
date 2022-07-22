@@ -4,6 +4,10 @@
   padding: 3rem 0 4rem;
   text-align: center;
 
+  h2 {
+    text-align: left;
+  }
+
   .grid {
     @include grid(repeat(2, 1fr), 2rem);
   }

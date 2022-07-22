@@ -3,52 +3,17 @@
 .section-b {
   padding: 3rem 0 4rem;
 
-  .video-section {
-    position: relative;
-  }
-
-  .img {
-    position: relative;
-
-    .play-icon {
-      @include flex(center, center);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      text-align: center;
-      color: $white;
-      height: 90px;
-      width: 90px;
-      font-size: 2rem;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-  }
-
-  .p-absolute {
-    position: absolute;
-    bottom: 0;
-    right: -0.5rem;
-    border: 6px solid $white;
-    width: 40%;
-  }
-
   .about {
     margin-top: 2rem;
     h2 {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
       text-align: left;
-
-      &::after {
-        left: 0;
-      }
     }
 
     p {
       color: $paragrapgy-clr;
       font-size: $font-sz-200;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
   }
 

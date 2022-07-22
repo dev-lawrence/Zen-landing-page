@@ -140,30 +140,30 @@ if (body === about) {
 
 // CARDS
 // fade in options
-cardOptions = {
-  threshold: 0,
-  rootMargin: '0px 0px -150px 0px',
-};
+// cardOptions = {
+//   threshold: 0,
+//   rootMargin: '0px 0px -150px 0px',
+// };
 
 // fade in cards
-const showCardsOnScroll = new IntersectionObserver(function (
-  entries,
-  showCardsOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('appear');
-      showCardsOnScroll.unobserve(entry.target);
-    }
-  });
-},
-cardOptions);
+// const showCardsOnScroll = new IntersectionObserver(function (
+//   entries,
+//   showCardsOnScroll
+// ) {
+//   entries.forEach((entry) => {
+//     if (!entry.isIntersecting) {
+//       return;
+//     } else {
+//       entry.target.classList.add('appear');
+//       showCardsOnScroll.unobserve(entry.target);
+//     }
+//   });
+// },
+// cardOptions);
 
-cards.forEach((card) => {
-  showCardsOnScroll.observe(card);
-});
+// cards.forEach((card) => {
+//   showCardsOnScroll.observe(card);
+// });
 
 // countdown timer
 // const countDown = () => {

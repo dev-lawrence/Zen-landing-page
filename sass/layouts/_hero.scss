@@ -33,7 +33,7 @@
 
     &::after {
       content: '';
-      opacity: 0.5;
+      opacity: 0.7;
       position: absolute;
       top: 0;
       left: 0;
@@ -83,9 +83,14 @@
 }
 
 .buttons {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: all 0.4s ease-in-out;
+
+  @include medium {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   button {
     border: none;
@@ -108,7 +113,9 @@
   }
 }
 
-#hero-section:hover .buttons {
-  opacity: 1;
-  visibility: visible;
+@include medium {
+  #hero-section:hover .buttons {
+    opacity: 1;
+    visibility: visible;
+  }
 }

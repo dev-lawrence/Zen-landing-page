@@ -5,14 +5,20 @@
   text-transform: uppercase;
   display: inline-block;
   font-size: 0.9rem;
-  color: $btn-clr;
-  transition: color 0.3s ease-in;
+  padding: 0.5rem 1rem;
+  color: $black;
+  background-color: transparent;
+  border: 1.5px solid $primary-clr;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $primary-clr;
+  }
 
   span {
     margin-right: 0.5rem;
-  }
-
-  &:hover {
-    color: $btn-hover-clr;
+    color: $black;
   }
 }

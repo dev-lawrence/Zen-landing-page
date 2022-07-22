@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .section-a {
   background-color: #f8f9fa;
-  padding: 3rem 0 4rem;
+  padding: 7rem 0 4rem;
 }
 .section-a .card {
   margin-bottom: 2.5rem;
@@ -52,49 +52,17 @@
 .section-b {
   padding: 3rem 0 4rem;
 }
-.section-b .video-section {
-  position: relative;
-}
-.section-b .img {
-  position: relative;
-}
-.section-b .img .play-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  color: #fff;
-  height: 90px;
-  width: 90px;
-  font-size: 2rem;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.15);
-}
-.section-b .p-absolute {
-  position: absolute;
-  bottom: 0;
-  right: -0.5rem;
-  border: 6px solid #fff;
-  width: 40%;
-}
 .section-b .about {
   margin-top: 2rem;
 }
 .section-b .about h2 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   text-align: left;
-}
-.section-b .about h2::after {
-  left: 0;
 }
 .section-b .about p {
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   .section-b .grid {
@@ -121,6 +89,9 @@
 .section-c {
   padding: 3rem 0 4rem;
   text-align: center;
+}
+.section-c h2 {
+  text-align: left;
 }
 .section-c .grid {
   display: grid;
@@ -567,6 +538,7 @@ header .d-flex {
 }
 header.showBg {
   background-color: #fff;
+  box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.3);
 }
 header.showBg .nav a {
   color: rgba(0, 0, 0, 0.6);
@@ -615,7 +587,7 @@ header.showBg .nav .active {
 }
 #hero-section .content::after {
   content: "";
-  opacity: 0.5;
+  opacity: 0.7;
   position: absolute;
   top: 0;
   left: 0;
@@ -661,9 +633,15 @@ header.showBg .nav .active {
 }
 
 .buttons {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: all 0.4s ease-in-out;
+}
+@media (min-width: 768px) {
+  .buttons {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .buttons button {
   border: none;
@@ -683,11 +661,12 @@ header.showBg .nav .active {
   background-color: #000;
 }
 
-#hero-section:hover .buttons {
-  opacity: 1;
-  visibility: visible;
+@media (min-width: 768px) {
+  #hero-section:hover .buttons {
+    opacity: 1;
+    visibility: visible;
+  }
 }
-
 .toggle-menu {
   color: #fff;
   font-size: 1.5rem;
@@ -707,7 +686,6 @@ header.showBg .nav .active {
   content: "\f00d";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #000;
   font-size: 1.5rem;
 }
 
@@ -734,7 +712,7 @@ header.showBg .nav .active {
 }
 
 .menu {
-  background-color: #fff;
+  background-color: #17171f;
   height: 100vh;
   padding: 10rem 10rem 7rem 2.5rem;
   text-align: left;
@@ -766,12 +744,12 @@ header.showBg .nav .active {
   }
 }
 .menu a {
-  color: #000;
+  color: #fff;
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
 }
 .menu a:hover {
-  color: #ff3a20;
+  color: hsl(189deg, 100%, 50%);
 }
 @media (min-width: 768px) {
   .menu a:hover {
@@ -783,10 +761,11 @@ header.showBg .nav .active {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     font-size: 0.9rem;
+    font-weight: 500;
   }
 }
 .menu a.active {
-  color: #ff3a20;
+  color: hsl(189deg, 100%, 50%);
 }
 @media (min-width: 768px) {
   .menu a.active {
@@ -804,7 +783,7 @@ header.showBg .nav .active {
 }
 .fade-in {
   transform: translateY(-40px);
-  opacity: 0;
+  opacity: 1;
 }
 
 .fade-in.appear {
@@ -814,7 +793,7 @@ header.showBg .nav .active {
 }
 
 body {
-  background-color: #fff;
+  background-color: #f8f9fa;
   font-family: "Work Sans", sans-serif;
   line-height: 1.6;
 }
@@ -880,23 +859,28 @@ h1,
 h2 {
   font-family: "Poppins", serif;
   text-transform: capitalize;
-  text-align: center;
 }
 
 h2 {
   font-size: 2.3rem;
   font-weight: 500;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 h2::after {
   content: "";
   position: absolute;
-  bottom: -0.2rem;
-  left: 40%;
-  background: #000;
-  width: 20%;
-  height: 0.031rem;
+  bottom: 0.3rem;
+  left: 0;
+  background: hsl(189deg, 100%, 50%);
+  width: 4rem;
+  height: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 h3 {
@@ -910,14 +894,20 @@ h3 {
   text-transform: uppercase;
   display: inline-block;
   font-size: 0.9rem;
-  color: #ff3a20;
-  transition: color 0.3s ease-in;
+  padding: 0.5rem 1rem;
+  color: #000;
+  background-color: transparent;
+  border: 1.5px solid hsl(189deg, 100%, 50%);
+  border-radius: 0.3rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in;
+}
+.btn:hover {
+  background-color: hsl(189deg, 100%, 50%);
 }
 .btn span {
   margin-right: 0.5rem;
-}
-.btn:hover {
-  color: #c7180c;
+  color: #000;
 }
 
 .hotel-staff-section {
