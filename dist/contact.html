@@ -16,7 +16,7 @@
     <title>Zen website / contact page</title>
     <script defer src="./index.js"></script>
   </head>
-  <body>
+  <body id="form">
     <!--HEADER SECTION-->
     <header id="header-section">
       <div class="container">
@@ -64,7 +64,7 @@
     <section id="contact-section">
       <div class="container">
         <div class="grid">
-          <form class="form" netlify>
+          <form name="form" class="form" data-netlify="true">
             <div class="row">
               <label for="name">full name</label><br />
               <input id="name" type="text" placeholder="Full Name" />
@@ -72,7 +72,12 @@
 
             <div class="row">
               <label for="email">email</label><br />
-              <input id="email" type="email" placeholder="Email Address" />
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Address"
+                required
+              />
             </div>
 
             <div class="row">

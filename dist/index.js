@@ -9,8 +9,8 @@ const cards = document.querySelectorAll('.fade-in');
 const page = document.querySelector('#home');
 const about = document.querySelector('#about');
 const body = document.querySelector('body');
-const loaders = document.querySelector('.loaders');
-const main = document.querySelector('.init');
+const loaders = document.querySelector('.preloader');
+const form = document.querySelector('.form');
 
 // change header background color on scroll
 const showBg = () => {
@@ -70,28 +70,27 @@ const galleryFun = () => {
   });
 };
 
-// show loaders
-const inti = () => {
-  setTimeout(() => {
-    loaders.style.display = 'none';
-    loaders.style.opacity = 0;
-
-    // setTimeout(() => (main.style.opacity = 1), 50);
-  }, 4000);
-};
-
-inti();
-
 // SLIDER FUNCTION FOR THE HOME SECTION
 if (body === page) {
+  // // PRELOADER
+  const inti = () => {
+    setTimeout(() => {
+      loaders.style.pointerEvent = 'none';
+      loaders.style.opacity = 0;
+      setTimeout(() => (loaders.style.zIndex = 0), 1000);
+    }, 3000);
+  };
+
+  inti();
+
   const slider = document.querySelector('.slider__container');
   const slides = Array.from(slider.children);
   const slideSize = slides[0].getBoundingClientRect().width;
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   let currentSlide = 0;
-  let auto = false;
-  let slideTime = 5000;
+  let auto = true;
+  let slideTime = 7000;
   let slideInterval;
 
   const reset = () => {
@@ -183,6 +182,13 @@ if (body === page || body === about) {
   };
 
   setInterval(countDown, 1000);
+}
+
+// FORM CONTROL
+if (body === form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  });
 }
 
 // CARDS

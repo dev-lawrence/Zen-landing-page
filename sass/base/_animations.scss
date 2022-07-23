@@ -25,17 +25,17 @@
 }
 
 // loaders
-.loaders {
+.preloader {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100000;
-  background-color: $bg-clr;
+  z-index: 700;
+  background-color: $black;
+  transition: opacity 0.5s ease-out;
 
   span {
     background-color: $primary-clr;
