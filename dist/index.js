@@ -9,7 +9,8 @@ const cards = document.querySelectorAll('.fade-in');
 const page = document.querySelector('#home');
 const about = document.querySelector('#about');
 const body = document.querySelector('body');
-const promo = document.querySelector('#promo');
+const loaders = document.querySelector('.loaders');
+const main = document.querySelector('.init');
 
 // change header background color on scroll
 const showBg = () => {
@@ -68,6 +69,18 @@ const galleryFun = () => {
     }
   });
 };
+
+// show loaders
+const inti = () => {
+  setTimeout(() => {
+    loaders.style.display = 'none';
+    loaders.style.opacity = 0;
+
+    // setTimeout(() => (main.style.opacity = 1), 50);
+  }, 4000);
+};
+
+inti();
 
 // SLIDER FUNCTION FOR THE HOME SECTION
 if (body === page) {

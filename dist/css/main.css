@@ -242,7 +242,7 @@
   width: 100vw;
   height: 100%;
   color: #fff;
-  z-index: 10000;
+  z-index: 500;
   cursor: zoom-out;
   opacity: 0;
   pointer-events: none;
@@ -579,6 +579,7 @@ header.showBg .nav .active {
 #hero-section {
   height: 100vh;
   overflow: hidden;
+  z-index: 400;
 }
 #hero-section .slider__container {
   position: relative;
@@ -815,6 +816,45 @@ header.showBg .nav .active {
   transition: opacity 0.7s ease-in, transform 0.7s ease-in;
 }
 
+.loaders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  background-color: #f8f9fa;
+}
+.loaders span {
+  background-color: #0d23ae;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  transform: translate3d(0);
+  animation: bounce 0.8s infinite alternate;
+}
+.loaders span:nth-child(2) {
+  background-color: #ae0d23;
+  animation-delay: 0.2s;
+}
+.loaders span:nth-child(3) {
+  background-color: #23ae0d;
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 16px;
+    width: 16px;
+    transform: translate3d(0, -16px, 0);
+  }
+}
 body {
   background-color: #f8f9fa;
   font-family: "Poppins", sans-serif;

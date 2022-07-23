@@ -4,6 +4,7 @@
 #hero-section {
   height: 100vh;
   overflow: hidden;
+  z-index: 400;
 
   .slider__container {
     position: relative;
