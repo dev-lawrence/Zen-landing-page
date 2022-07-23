@@ -142,13 +142,13 @@
 .section-d {
   padding: 2rem 0;
   color: #fff;
-  background: #000 url("../.././dist/img/slider-3.jpg");
+  background: #000 url("./../../dist/img/slider-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   position: relative;
-  z-index: 10;
+  z-index: 11;
 }
 .section-d::after {
   content: "";
