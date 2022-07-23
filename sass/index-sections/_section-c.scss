@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .section-c {
-  padding: 3rem 0 4rem;
+  padding: $padding-top 0;
   text-align: center;
 
   h2 {

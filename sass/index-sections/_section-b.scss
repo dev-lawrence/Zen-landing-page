@@ -15,6 +15,22 @@
       font-size: $font-sz-200;
       margin-bottom: 1.5rem;
     }
+
+    &-btn {
+      span {
+        margin-right: 0.5rem;
+        color: $black;
+      }
+
+      &:hover {
+        background-color: $primary-clr;
+        color: $white;
+      }
+
+      &:hover span {
+        color: $white;
+      }
+    }
   }
 
   //MEDIA QUERY

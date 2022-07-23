@@ -6,13 +6,17 @@
   cursor: pointer;
   z-index: 100;
 
-  &.color {
+  &.colorBlack {
     color: $black;
   }
 
   @include medium {
     display: none;
   }
+}
+
+.colorWhite {
+  color: $white;
 }
 
 //add close icon

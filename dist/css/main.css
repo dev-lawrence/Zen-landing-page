@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .section-a {
   background-color: #f8f9fa;
-  padding: 7rem 0 4rem;
+  padding-top: 7rem;
 }
 .section-a .card {
   margin-bottom: 2.5rem;
@@ -34,14 +34,14 @@
 .section-a .card:hover {
   box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-a .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section-a .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -64,7 +64,18 @@
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
-@media (min-width: 768px) {
+.section-b .about-btn span {
+  margin-right: 0.5rem;
+  color: #000;
+}
+.section-b .about-btn:hover {
+  background-color: #0d23ae;
+  color: #fff;
+}
+.section-b .about-btn:hover span {
+  color: #fff;
+}
+@media (min-width: 48rem) {
   .section-b .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -75,7 +86,7 @@
     margin-top: -1rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section-b .about {
     margin-left: 2rem;
     margin-top: 0;
@@ -87,7 +98,7 @@
 }
 
 .section-c {
-  padding: 3rem 0 4rem;
+  padding: 7rem 0;
   text-align: center;
 }
 .section-c h2 {
@@ -98,7 +109,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-c {
     padding-top: 6rem;
   }
@@ -113,14 +124,14 @@
 .section-c h3 {
   font-size: 1.1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-c .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section-c .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -131,7 +142,7 @@
 .section-d {
   padding: 2rem 0;
   color: #fff;
-  background: #000 url("../../../img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp");
+  background: #000 url("../../dist/img/slider-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -156,7 +167,7 @@
   text-transform: capitalize;
   margin-bottom: 0.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-d .promo h3 {
     margin-bottom: 1rem;
   }
@@ -167,12 +178,10 @@
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  border: 1px solid #eec60a;
-  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 .section-d .promo .cta:hover {
-  color: #fff;
-  background-color: #eec60a;
+  background-color: #0d23ae;
 }
 .section-d .duration span {
   text-transform: uppercase;
@@ -191,7 +200,7 @@
   flex-wrap: wrap;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-d .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -201,28 +210,23 @@
 }
 
 .section-e {
-  padding: 3rem 0 2rem;
+  padding-top: 7rem;
 }
-@media (min-width: 768px) {
-  .section-e {
-    padding-bottom: 6rem;
-  }
+.section-e h2 {
+  margin-bottom: 4rem;
 }
-.section-e .img {
-  transition: opacity 0.2s ease-in-out;
+.section-e img {
   cursor: zoom-in;
+  object-fit: cover;
 }
-.section-e .img:hover {
-  opacity: 0.7;
-}
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-e .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section-e .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -231,7 +235,7 @@
 }
 
 .modal-container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -239,6 +243,7 @@
   height: 100%;
   color: #fff;
   z-index: 10000;
+  cursor: zoom-out;
   opacity: 0;
   pointer-events: none;
   display: flex;
@@ -246,30 +251,19 @@
   justify-content: center;
   transition: all 0.3s ease-in;
 }
-.modal-container .zoom {
-  width: 95%;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .modal-container .zoom {
-    width: 700px;
-    margin: unset;
-  }
-}
-.modal-container .close-container {
-  position: relative;
-}
-.modal-container .close {
-  position: absolute;
-  bottom: 12rem;
-  right: 1rem;
-  font-size: 2rem;
-  cursor: pointer;
+.modal-container .caption {
   color: #fff;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -7%);
 }
-@media (min-width: 768px) {
-  .modal-container .close {
-    color: #000;
+@media (min-width: 48rem) {
+  .modal-container .caption {
+    font-size: 1.2rem;
+    bottom: 2%;
+    transform: translate(-50%, -2%);
   }
 }
 
@@ -278,8 +272,26 @@
   opacity: 1;
 }
 
+.full-img {
+  position: absolute;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 0.3s ease-out;
+}
+@media (min-width: 48rem) {
+  .full-img {
+    height: 80%;
+  }
+}
+
+.full-img.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .section-f {
-  padding: 4rem 0 3rem;
+  padding-top: 7rem;
 }
 .section-f p {
   color: rgba(0, 0, 0, 0.5);
@@ -319,20 +331,20 @@
 }
 .section-f .title .admin {
   position: relative;
-  color: #ff3a20;
+  color: #0d23ae;
   transition: color 0.2s ease-in-out;
 }
 .section-f .title .admin:hover {
-  color: #c7180c;
+  color: #000;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-f .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .section-f .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -342,7 +354,10 @@
 
 .section-g {
   background-color: #f8f9fa;
-  padding: 3rem 0 2rem;
+  padding: 7rem 0;
+}
+.section-g h2 {
+  margin-bottom: 3rem;
 }
 .section-g img {
   width: 79px;
@@ -366,7 +381,7 @@
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .section-g .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -403,13 +418,13 @@
 }
 #footer-section .about .btn {
   color: #fff;
-  background-color: #ff3a20;
   padding: 0.4rem 1.5rem;
   border-radius: 4rem;
   transition: background-color 0.2s ease-in-out;
 }
 #footer-section .about .btn:hover {
-  background-color: #c7180c;
+  background-color: #0d23ae;
+  color: #fff;
 }
 #footer-section .menu--links a,
 #footer-section .social-links a,
@@ -421,7 +436,7 @@
 #footer-section .copyright a:hover {
   color: #fff;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #footer-section .menu--links {
     margin-left: 1.5rem;
   }
@@ -454,10 +469,10 @@
   visibility: visible;
 }
 #footer-section .page-up a:hover {
-  background-color: #ff3a20;
+  background-color: #0d23ae;
   opacity: 1;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #footer-section .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -485,7 +500,7 @@
   border-radius: 0.2rem;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
-  outline-color: #ff3a20;
+  outline-color: #0d23ae;
   border: 1px solid #ced4da;
 }
 .form input[type=text],
@@ -497,16 +512,16 @@
   padding-top: 0.5rem;
 }
 .form ::placeholder {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .form .btn {
   color: #fff;
   outline: none;
   border: none;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   text-transform: capitalize;
-  background-color: #ff3a20;
+  background-color: #0d23ae;
   padding: 0.7rem 1.5rem;
   margin-top: 1rem;
   border-radius: 4rem;
@@ -540,19 +555,21 @@ header.showBg {
   background-color: #fff;
   box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.3);
 }
-header.showBg .nav a {
-  color: rgba(0, 0, 0, 0.6);
-}
-header.showBg .nav a:hover {
-  color: #000;
+@media (min-width: 48rem) {
+  header.showBg .nav a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  header.showBg .nav a:hover {
+    color: #0d23ae;
+  }
 }
 header.showBg .nav .active {
-  color: #ff3a20;
+  color: #0d23ae;
 }
 
 .logo a {
   color: #fff;
-  font-family: "Poppins", serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
 }
 .logo a.color {
@@ -637,7 +654,7 @@ header.showBg .nav .active {
   visibility: visible;
   transition: all 0.4s ease-in-out;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .buttons {
     opacity: 0;
     visibility: hidden;
@@ -645,23 +662,25 @@ header.showBg .nav .active {
 }
 .buttons button {
   border: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
   padding: 0.8rem;
   outline: none;
+  border-radius: 0.3rem;
   z-index: 10;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.2s ease-in;
 }
 .buttons button i {
   text-align: center;
   font-size: 1.1rem;
 }
 .buttons button:hover {
-  background-color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #hero-section:hover .buttons {
     opacity: 1;
     visibility: visible;
@@ -673,13 +692,17 @@ header.showBg .nav .active {
   cursor: pointer;
   z-index: 100;
 }
-.toggle-menu.color {
+.toggle-menu.colorBlack {
   color: #000;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .toggle-menu {
     display: none;
   }
+}
+
+.colorWhite {
+  color: #fff;
 }
 
 .toggle-menu i.showMenu::before {
@@ -701,7 +724,7 @@ header.showBg .nav .active {
   transform: translateX(500px);
   transition: transform 0.5s ease-in-out;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .nav {
     position: static;
     transform: unset;
@@ -712,12 +735,12 @@ header.showBg .nav .active {
 }
 
 .menu {
-  background-color: #17171f;
+  background-color: #000;
   height: 100vh;
   padding: 10rem 10rem 7rem 2.5rem;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .menu {
     background-color: transparent;
     padding: 0;
@@ -731,14 +754,14 @@ header.showBg .nav .active {
   margin-bottom: 1.2rem;
   text-transform: capitalize;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .menu li {
     margin-bottom: 0;
     margin-left: 2rem;
     justify-self: flex-end;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .menu li {
     margin-left: 3rem;
   }
@@ -749,14 +772,14 @@ header.showBg .nav .active {
   transition: color 0.2s ease-in-out;
 }
 .menu a:hover {
-  color: hsl(189deg, 100%, 50%);
+  color: #0d23ae;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .menu a:hover {
     color: #fff;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .menu a {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
@@ -765,9 +788,9 @@ header.showBg .nav .active {
   }
 }
 .menu a.active {
-  color: hsl(189deg, 100%, 50%);
+  color: #0d23ae;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .menu a.active {
     color: #fff;
   }
@@ -783,7 +806,7 @@ header.showBg .nav .active {
 }
 .fade-in {
   transform: translateY(-40px);
-  opacity: 1;
+  opacity: 0;
 }
 
 .fade-in.appear {
@@ -794,31 +817,31 @@ header.showBg .nav .active {
 
 body {
   background-color: #f8f9fa;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
 }
 
 .container {
   padding: 0rem 0.938rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 36rem) {
   .container {
     width: 576px;
     margin: 0 auto;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .container {
     width: 760px;
     margin: 0 auto;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .container {
     width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .container {
     width: 1100px;
   }
@@ -851,13 +874,13 @@ span {
 }
 
 body.fixed {
-  position: fixed;
+  overflow: hidden;
   width: 100%;
 }
 
 h1,
 h2 {
-  font-family: "Poppins", serif;
+  font-family: "Poppins", sans-serif;
   text-transform: capitalize;
 }
 
@@ -867,7 +890,7 @@ h2 {
   position: relative;
   margin-bottom: 6rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   h2 {
     font-size: 3rem;
   }
@@ -877,7 +900,7 @@ h2::after {
   position: absolute;
   bottom: 0.3rem;
   left: 0;
-  background: hsl(189deg, 100%, 50%);
+  background: #0d23ae;
   width: 4rem;
   height: 0.3rem;
   border-radius: 0.2rem;
@@ -897,17 +920,10 @@ h3 {
   padding: 0.5rem 1rem;
   color: #000;
   background-color: transparent;
-  border: 1.5px solid hsl(189deg, 100%, 50%);
+  border: 1.5px solid #0d23ae;
   border-radius: 0.3rem;
   font-weight: 500;
   transition: background-color 0.3s ease-in;
-}
-.btn:hover {
-  background-color: hsl(189deg, 100%, 50%);
-}
-.btn span {
-  margin-right: 0.5rem;
-  color: #000;
 }
 
 .hotel-staff-section {
@@ -950,6 +966,11 @@ h3 {
 }
 .hotel-staff-section .btn {
   text-transform: capitalize;
+  border: none;
+  color: #0d23ae;
+}
+.hotel-staff-section .btn span {
+  margin-right: 0.5rem;
 }
 .hotel-staff-section .card:hover img {
   transform: scale(1.1);
@@ -957,14 +978,14 @@ h3 {
 .hotel-staff-section .card:hover {
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .hotel-staff-section .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .hotel-staff-section .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -972,10 +993,15 @@ h3 {
   }
 }
 
+.about-gallery {
+  padding-top: 0;
+  margin-bottom: 7rem;
+}
+
 #contact-section .contact-info {
   padding: 4rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #contact-section .contact-info {
     padding-top: 5rem;
   }
@@ -1000,19 +1026,15 @@ h3 {
   margin-bottom: 1rem;
 }
 #contact-section .contact-info a {
-  color: #ff3a20;
-  transition: color 0.2s ease-in-out;
+  color: #0d23ae;
 }
-#contact-section .contact-info a:hover {
-  color: #c7180c;
-}
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   #contact-section .grid {
     width: 80%;
     margin: 0 auto;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   #contact-section .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

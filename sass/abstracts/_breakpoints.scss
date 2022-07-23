@@ -1,11 +1,11 @@
 $breakpoints: (
-  'extra-small': 280px,
-  'small': 320px,
-  'landscape': 576px,
-  'medium': 768px,
-  'large': 1024px,
-  'extra-large': 1200px,
-  'huge': 11400px,
+  'extra-small': 17.5rem,
+  'small': 20rem,
+  'landscape': 36rem,
+  'medium': 48rem,
+  'large': 64rem,
+  'extra-large': 75rem,
+  'huge': 90rem,
 );
 
 @mixin extra-small {

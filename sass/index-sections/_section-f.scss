@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .section-f {
-  padding: 4rem 0 3rem;
+  padding-top: $padding-top;
 
   p {
     color: $paragrapgy-clr;
@@ -46,11 +46,11 @@
 
     .admin {
       position: relative;
-      color: $btn-clr;
+      color: $primary-clr;
       transition: color 0.2s ease-in-out;
 
       &:hover {
-        color: $btn-hover-clr;
+        color: $black;
       }
     }
   }

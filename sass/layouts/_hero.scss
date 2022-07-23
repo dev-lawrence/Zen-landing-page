@@ -94,13 +94,14 @@
 
   button {
     border: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     cursor: pointer;
     padding: 0.8rem;
     outline: none;
+    border-radius: 0.3rem;
     z-index: 10;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.2s ease-in;
 
     i {
       text-align: center;
@@ -108,7 +109,8 @@
     }
 
     &:hover {
-      background-color: $black;
+      background-color: $white;
+      color: $black;
     }
   }
 }

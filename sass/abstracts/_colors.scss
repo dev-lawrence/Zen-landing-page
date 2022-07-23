@@ -3,11 +3,11 @@ $white: #fff;
 $black: #000;
 
 // PRIMARY COLORS
-$primary-clr: hsl(189, 100%, 50%);
+$primary-clr: #0d23ae;
 
 //BODY COLORS
 $bg-clr: #f8f9fa;
-$nav-clr: #17171f;
+$nav-clr: $black;
 
 //BUTTON COLORS
 // to be removed
@@ -16,9 +16,6 @@ $btn-hover-clr: #c7180c;
 
 // CARD COLORS
 $cardp-clr: #5c7893;
-
-// PROMO COLOR
-$promo-clr: #eec60a;
 
 //TYPOGRAHY COLORS
 $paragrapgy-clr: rgba(0, 0, 0, 0.5);

@@ -3,8 +3,7 @@
 .section-d {
   padding: 2rem 0;
   color: $white;
-  background: $black
-    url('../../../img/xhero_1.jpg.pagespeed.ic.WnC_CEjW9b.webp');
+  background: $black url('../../dist/img/slider-3.jpg');
   @include image-property(fixed);
   position: relative;
   z-index: 10;
@@ -39,12 +38,10 @@
       padding: 0.5rem 1rem;
       margin-bottom: 0.5rem;
       font-size: $font-sz-200;
-      border: 1px solid $promo-clr;
-      transition: color 0.2s ease-in, background-color 0.2s ease-in;
+      transition: background-color 0.3s ease-in;
 
       &:hover {
-        color: $white;
-        background-color: $promo-clr;
+        background-color: $primary-clr;
       }
     }
   }

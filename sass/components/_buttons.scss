@@ -12,13 +12,4 @@
   border-radius: 0.3rem;
   font-weight: 500;
   transition: background-color 0.3s ease-in;
-
-  &:hover {
-    background-color: $primary-clr;
-  }
-
-  span {
-    margin-right: 0.5rem;
-    color: $black;
-  }
 }

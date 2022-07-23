@@ -2,7 +2,11 @@
 
 .section-g {
   background-color: $bg-clr;
-  padding: 3rem 0 2rem;
+  padding: $padding-top 0;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
 
   img {
     width: 79px;

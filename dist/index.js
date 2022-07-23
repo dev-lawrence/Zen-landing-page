@@ -9,6 +9,7 @@ const cards = document.querySelectorAll('.fade-in');
 const page = document.querySelector('#home');
 const about = document.querySelector('#about');
 const body = document.querySelector('body');
+const promo = document.querySelector('#promo');
 
 // change header background color on scroll
 const showBg = () => {
@@ -17,11 +18,11 @@ const showBg = () => {
   if (scroll > 200) {
     header.classList.add('showBg');
     logo.classList.add('color');
-    menuBar.classList.add('color');
+    menuBar.classList.add('colorBlack');
   } else {
     header.classList.remove('showBg');
     logo.classList.remove('color');
-    menuBar.classList.remove('color');
+    menuBar.classList.remove('colorBlack');
   }
 };
 
@@ -30,6 +31,7 @@ menuBar.addEventListener('click', () => {
   nav.classList.toggle('showMenu');
   let closeBar = menuBar.querySelector('i');
   closeBar.classList.toggle('showMenu');
+  closeBar.classList.toggle('colorWhite');
   document.body.classList.toggle('fixed');
 });
 
@@ -43,22 +45,27 @@ menuLinks.forEach((link) => {
 // FOR HOME AND ABOUT SECTION
 const galleryFun = () => {
   // GALLERY SECTION
-  const galleryImg = document.querySelectorAll('.img');
-  const modal = document.querySelector('.modal-container');
-  const closeIcon = document.querySelector('.close');
-  const zoom = document.querySelector('.zoom');
+  const modal = document.querySelector('#modal');
+  const preview = document.querySelectorAll('.gallery img');
+  const original = document.querySelector('.full-img');
+  const caption = document.querySelector('.caption');
 
-  galleryImg.forEach((img) => {
-    img.addEventListener('click', () => {
-      zoom.src = img.getAttribute('src');
+  preview.forEach((preview) => {
+    preview.addEventListener('click', () => {
       modal.classList.add('show');
-      document.body.style.overflow = 'hidden';
+      original.classList.add('open');
+      originalSrc = preview.getAttribute('data-original');
+      original.src = originalSrc;
+      altText = preview.alt;
+      caption.textContent = altText;
     });
   });
 
-  closeIcon.addEventListener('click', () => {
-    modal.classList.remove('show');
-    document.body.style.overflow = 'auto';
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-container')) {
+      modal.classList.remove('show');
+      original.classList.remove('open');
+    }
   });
 };
 
@@ -138,57 +145,59 @@ if (body === about) {
   galleryFun();
 }
 
+if (body === page || body === about) {
+  // countdown timer
+  const countDown = () => {
+    const releaseDate = new Date('October 20, 2022 00:00:00').getTime();
+    const presentDate = new Date().getTime();
+    const gap = releaseDate - presentDate;
+
+    //calculate time
+    const second = 1000;
+    const minute = 60 * second;
+    const hour = 60 * minute;
+    const day = 24 * hour;
+
+    const dayText = Math.floor(gap / day);
+    const hourText = Math.floor((gap % day) / hour);
+    const minuteText = Math.floor((gap % hour) / minute);
+    const secondText = Math.floor((gap % minute) / second);
+
+    document.querySelector('.day').textContent = dayText;
+    document.querySelector('.hour').textContent = hourText;
+    document.querySelector('.minute').textContent = minuteText;
+    document.querySelector('.second').textContent = secondText;
+  };
+
+  setInterval(countDown, 1000);
+}
+
 // CARDS
 // fade in options
-// cardOptions = {
-//   threshold: 0,
-//   rootMargin: '0px 0px -150px 0px',
-// };
+cardOptions = {
+  threshold: 0,
+  rootMargin: '0px 0px -120px 0px',
+};
 
 // fade in cards
-// const showCardsOnScroll = new IntersectionObserver(function (
-//   entries,
-//   showCardsOnScroll
-// ) {
-//   entries.forEach((entry) => {
-//     if (!entry.isIntersecting) {
-//       return;
-//     } else {
-//       entry.target.classList.add('appear');
-//       showCardsOnScroll.unobserve(entry.target);
-//     }
-//   });
-// },
-// cardOptions);
+const showCardsOnScroll = new IntersectionObserver(function (
+  entries,
+  showCardsOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      showCardsOnScroll.unobserve(entry.target);
+    }
+  });
+},
+cardOptions);
 
-// cards.forEach((card) => {
-//   showCardsOnScroll.observe(card);
-// });
-
-// countdown timer
-// const countDown = () => {
-//   const releaseDate = new Date('August 20, 2022 00:00:00').getTime();
-//   const presentDate = new Date().getTime();
-//   const gap = releaseDate - presentDate;
-
-//   //calculate time
-//   const second = 1000;
-//   const minute = 60 * second;
-//   const hour = 60 * minute;
-//   const day = 24 * hour;
-
-//   const dayText = Math.floor(gap / day);
-//   const hourText = Math.floor((gap % day) / hour);
-//   const minuteText = Math.floor((gap % hour) / minute);
-//   const secondText = Math.floor((gap % minute) / second);
-
-//   document.querySelector('.day').textContent = dayText;
-//   document.querySelector('.hour').textContent = hourText;
-//   document.querySelector('.minute').textContent = minuteText;
-//   document.querySelector('.second').textContent = secondText;
-// };
-
-// setInterval(countDown, 1000);
+cards.forEach((card) => {
+  showCardsOnScroll.observe(card);
+});
 
 // show goToTop arrow on scroll
 const pageUp = () => {

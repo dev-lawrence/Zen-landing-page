@@ -48,6 +48,12 @@
 
   .btn {
     text-transform: capitalize;
+    border: none;
+    color: $primary-clr;
+
+    span {
+      margin-right: 0.5rem;
+    }
   }
 
   //HOVER STATES
@@ -71,4 +77,9 @@
       @include grid(repeat(3, 1fr), 2rem);
     }
   }
+}
+
+.about-gallery {
+  padding-top: 0;
+  margin-bottom: 7rem;
 }

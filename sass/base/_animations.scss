@@ -14,8 +14,7 @@
 // FADE IN CARDS
 .fade-in {
   transform: translateY(-40px);
-  // opacity: 0;change to 0
-  opacity: 1;
+  opacity: 0;
 }
 
 .fade-in.appear {

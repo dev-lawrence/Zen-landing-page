@@ -36,13 +36,13 @@
 
     .btn {
       color: $white;
-      background-color: $btn-clr;
       padding: 0.4rem 1.5rem;
       border-radius: 4rem;
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
-        background-color: $btn-hover-clr;
+        background-color: $primary-clr;
+        color: $white;
       }
     }
   }
@@ -99,7 +99,7 @@
       }
 
       &:hover {
-        background-color: $btn-clr;
+        background-color: $primary-clr;
         opacity: 1;
       }
     }
