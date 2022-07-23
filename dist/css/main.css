@@ -148,7 +148,7 @@
   background-position: center center;
   background-attachment: fixed;
   position: relative;
-  z-index: 11;
+  z-index: 10;
 }
 .section-d::after {
   content: "";

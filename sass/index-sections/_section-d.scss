@@ -6,7 +6,7 @@
   background: $black url('../.././dist/img/slider-3.jpg');
   @include image-property(fixed);
   position: relative;
-  z-index: 11;
+  z-index: 10;
 
   &::after {
     content: '';
