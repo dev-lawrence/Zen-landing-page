@@ -142,11 +142,7 @@
 .section-d {
   padding: 2rem 0;
   color: #fff;
-<<<<<<< HEAD
-  background: #000 url("../.././dist/img/slider-3.jpg");
-=======
-  background: #000 url("./../../dist/img/slider-3.jpg");
->>>>>>> f558ce3ec1e69b00165e4160e03fbef0da6b78ab
+  background: #000 url("../../img/slider-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
