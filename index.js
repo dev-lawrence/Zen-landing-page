@@ -55,9 +55,9 @@ const galleryFun = () => {
     preview.addEventListener('click', () => {
       modal.classList.add('show');
       original.classList.add('open');
-      originalSrc = preview.getAttribute('data-original');
+      const originalSrc = preview.getAttribute('data-original');
       original.src = originalSrc;
-      altText = preview.alt;
+      const altText = preview.alt;
       caption.textContent = altText;
     });
   });
