@@ -45,28 +45,30 @@ menuLinks.forEach((link) => {
 
 // FOR HOME AND ABOUT SECTION
 const galleryFun = () => {
-  // GALLERY SECTION
-  const modal = document.querySelector('#modal');
-  const preview = document.querySelectorAll('.gallery img');
-  const original = document.querySelector('.full-img');
-  const caption = document.querySelector('.caption');
+  window.addEventListener('load', () => {
+    // GALLERY SECTION
+    const modal = document.querySelector('#modal');
+    const preview = document.querySelectorAll('.gallery img');
+    const original = document.querySelector('.full-img');
+    const caption = document.querySelector('.caption');
 
-  preview.forEach((preview) => {
-    preview.addEventListener('click', () => {
-      modal.classList.add('show');
-      original.classList.add('open');
-      const originalSrc = preview.getAttribute('data-original');
-      original.src = originalSrc;
-      const altText = preview.alt;
-      caption.textContent = altText;
+    preview.forEach((preview) => {
+      preview.addEventListener('click', () => {
+        modal.classList.add('show');
+        original.classList.add('open');
+        const originalSrc = preview.getAttribute('data-original');
+        original.src = originalSrc;
+        const altText = preview.alt;
+        caption.textContent = altText;
+      });
     });
-  });
 
-  modal.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-container')) {
-      modal.classList.remove('show');
-      original.classList.remove('open');
-    }
+    modal.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-container')) {
+        modal.classList.remove('show');
+        original.classList.remove('open');
+      }
+    });
   });
 };
 
