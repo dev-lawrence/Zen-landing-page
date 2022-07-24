@@ -64,15 +64,21 @@
     <section id="contact-section">
       <div class="container">
         <div class="grid">
-          <form name="form" class="form" data-netlify="true">
+          <form method="post" class="form" data-netlify="true">
             <div class="row">
               <label for="name">full name</label><br />
-              <input id="name" type="text" placeholder="Full Name" />
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Full Name"
+              />
             </div>
 
             <div class="row">
               <label for="email">email</label><br />
               <input
+                name="email"
                 id="email"
                 type="email"
                 placeholder="Email Address"
@@ -82,12 +88,13 @@
 
             <div class="row">
               <label for="phone">phone</label><br />
-              <input id="phone" type="tel" placeholder="Phone" />
+              <input name="phone" id="phone" type="tel" placeholder="Phone" />
             </div>
 
             <div class="message">
               <label for="message">message</label><br />
               <textarea
+                name="message"
                 id="message"
                 cols="30"
                 rows="10"
