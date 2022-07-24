@@ -56,7 +56,6 @@ const galleryFun = () => {
       modal.classList.add('show');
       original.classList.add('open');
       const originalSrc = preview.getAttribute('data-original');
-      console.log(originalSrc);
       original.src = originalSrc;
       const altText = preview.alt;
       caption.textContent = altText;
