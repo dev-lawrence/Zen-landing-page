@@ -160,7 +160,7 @@ if (body === about) {
 if (body === page || body === about) {
   // countdown timer
   const countDown = () => {
-    const releaseDate = new Date('October 20, 2022 00:00:00').getTime();
+    const releaseDate = new Date('October 20, 2023 00:00:00').getTime();
     const presentDate = new Date().getTime();
     const gap = releaseDate - presentDate;
 
